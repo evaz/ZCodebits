@@ -1,0 +1,28 @@
+First, Let's set up our HTML page. Make a DIV that tells you your LoginStatus, a Login Button, and a Logout Button. 
+
+Next let's include The Facebook Javascript Library, which is located under the Javascript SDK Reference page.
+
+Return to the top and just Copy and Paste fb-root DIV (required for SDK to load), and FB.INIT; if you are working on LOCALHOST, delete the channelUrl line. Otherwise, just do what the comments are telling you to do, which leads us to our APP ID.
+
+For those that already have an APP ID, go ahead and skip to ____The rest of you, listen up. To get a Facebook APP ID, click on the "Settings Page" link right under Authentication&Authorization. 
+
+Click on "+ Create a New App", and fill it out. If you're using localhost, don't check Web Hosting. SITE DOMAIN will be http://localhost. SITE URL will be http://localhost:9393/ Once you have that set up, copy your APP ID and paste it into your FB.init code. Boom. Facebook has been initialized.
+
+The next library is that for JQUERY, because it makes everything look so much more beautiful-in which case you shall witness-right now.
+
+Select our LOGINBTN, and call FB.LOGIN (which is defined in the source link) Then set a function called fbLoggedInOut as your parameter. Do the same for your LOGOUTBTN. 
+
+Now, let's DEFINE OUR FUNCTION fbLoggedInOut. Direct yourself to FB.login under Auth Methods in the left navigation.
+
+Do not copy and paste example! It's unnecessary and ugly, so let's do it our simpler and easier way, simply using the example as our guide. 
+
+The first two lines are the same (23+24) -- be sure to note how everything from "function" on are part of the parameters for FB.login. In order to make things easier to understand and also more organized, i separated the function and called it fbLoggedInOut.
+
+If you get a response object after clicking login (24), alert this and change the status text. And such the same, for clicking on LOGOUT (28), when your response does NOT have an object. 
+
+To see the response object, by the way, you can insert console.log(response) to see your cool Facebook object (27)[right click, view element, and go to Console]
+
+You have now built your own fb Log In button. Woohoo!
+See you at the next CodeCastle!
+
+**Reminder: SAVE after every edit you do! 
